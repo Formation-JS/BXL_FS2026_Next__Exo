@@ -9,12 +9,12 @@ export default function AboutPage() {
                 <div className='flex flex-row gap-1'>
                     <label htmlFor="input-email">Email</label>
                     <input id='input-email' name='email' type="email"
-                        className='border-1 border-green-600 p-0.5' />
+                        className='border border-green-600 p-0.5' />
                 </div>
                 <div className='flex flex-row gap-1'>
                     <label htmlFor="input-content">Message</label>
                     <textarea id='input-content' name='content' 
-                        className='border-1 border-green-600 p-0.5 resize-none' />
+                        className='border border-green-600 p-0.5 resize-none' />
                 </div>
                 <div>
                     <button type="submit" className='bg-green-600 text-yellow-400 rounded-md px-2 py-1'>Envoyer</button>
