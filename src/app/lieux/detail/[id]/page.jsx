@@ -1,23 +1,24 @@
 import lieux from '@/data/lieux-events.json';
+import PlaceService from '@/services/place.service';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-export default async function LocationDetailPage({ params }) {
+export default async function PlaceDetailPage({ params }) {
 
     const id = parseInt((await params).id);
 
-    const lieu = lieux.find(l => l.id === id);
-    if (!lieu) {
+    const place = await PlaceService.getById(id);
+    if (!place) {
         notFound();
     }
 
     return (
         <main className='p-3'>
-            <h1 className='text-green-600 text-3xl'>Information : {lieu.name}</h1>
+            <h1 className='text-green-600 text-3xl'>Information : {place.name}</h1>
             <address>
-                {lieu.address.street} <br />
-                {lieu.address.postalCode} {lieu.address.city} <br />
-                {lieu.address.country}
+                {place.address.street} <br />
+                {place.address.postalCode} {place.address.city} <br />
+                {place.address.country}
             </address>
 
             <Link href='/lieux' className='text-green-400'>Retourner à la liste</Link>
