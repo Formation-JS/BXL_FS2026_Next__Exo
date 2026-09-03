@@ -72,3 +72,16 @@ Modifier la page "A propos" (`/apropos`) pour traiter le formulaire avec des act
 ### Remarque
 Actuellement, il n'a pas de traitement à faire dans l'action.  
 Ajouter juste un "console log" pour vérifier que le formulaire fonctionne.
+
+---
+## Exercice 05
+Modifier le formulaire pour avec les champs suivants : 
+- Email : `string`
+- Sujet : `string (min 5 et max 50)` [Optionnel]
+- Message : `string (min 10)`
+- Priorité : `string (normal ou urgent)`
+- Etre recontacté : `boolean`
+
+Valider les données dans l'action serveur
+- En cas d'erreur : Afficher les erreurs dans le formulaire
+- En cas de success : Redirigé vers la page d'accueil
