@@ -4,7 +4,8 @@ const navLinks = [
     { target: '/', name: 'Accueil' },
     { target: '/events', name: 'Events' },
     { target: '/lieux', name: 'Lieux' },
-    { target: '/apropos', name: 'A propos' }
+    { target: '/apropos', name: 'A propos' },
+    { target: '/dashboard', name: 'Dashboard' }
 ];
 
 export default function NavBar() {
