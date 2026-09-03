@@ -21,6 +21,10 @@ const PlaceService = {
         }));
     },
 
+    haveNextPage: async (page, nbElem) => {
+        return (page * nbElem) < places.length;
+    },
+
     getById: async (id) => {
         await delay(3_500);
 
